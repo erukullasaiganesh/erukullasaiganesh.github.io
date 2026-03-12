@@ -6,7 +6,7 @@
 <title>Saiganesh Erukulla — Full Stack & Mobile Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
   :root {
     --bg: #050a0e;
@@ -18,21 +18,16 @@
     --muted: #5a7a70;
     --dim: #2a4040;
   }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 14px;
     line-height: 1.7;
     overflow-x: hidden;
   }
-
-  /* NOISE OVERLAY */
   body::before {
     content: '';
     position: fixed;
@@ -42,8 +37,6 @@
     z-index: 999;
     opacity: 0.4;
   }
-
-  /* GRID LINES */
   body::after {
     content: '';
     position: fixed;
@@ -55,90 +48,61 @@
     pointer-events: none;
     z-index: 0;
   }
-
-  /* ---- LAYOUT ---- */
   .wrapper { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-
-  /* ---- NAV ---- */
   nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    position: sticky; top: 0; z-index: 100;
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(12px);
     background: rgba(5, 10, 14, 0.85);
   }
   .nav-inner {
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1100px; margin: 0 auto;
     padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between;
   }
   .nav-logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 1rem;
-    color: var(--accent);
-    letter-spacing: -0.02em;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700; font-size: 1.1rem;
+    color: var(--accent); letter-spacing: 0.08em;
     text-decoration: none;
   }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    transition: color 0.2s;
+    color: var(--muted); text-decoration: none;
+    font-size: 0.75rem; letter-spacing: 0.1em;
+    text-transform: uppercase; transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--accent); }
-
-  /* ---- HERO ---- */
   .hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    padding: 6rem 0 4rem;
-    position: relative;
+    min-height: 90vh; display: flex; align-items: center;
+    padding: 6rem 0 4rem; position: relative;
   }
   .hero-glow {
-    position: absolute;
-    top: 10%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
+    position: absolute; top: 10%; right: -10%;
+    width: 600px; height: 600px;
     background: radial-gradient(circle, rgba(0,212,170,0.08) 0%, transparent 70%);
     pointer-events: none;
   }
   .hero-glow2 {
-    position: absolute;
-    bottom: 5%;
-    left: -5%;
-    width: 400px;
-    height: 400px;
+    position: absolute; bottom: 5%; left: -5%;
+    width: 400px; height: 400px;
     background: radial-gradient(circle, rgba(255,107,53,0.06) 0%, transparent 70%);
     pointer-events: none;
   }
   .hero-tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    padding: 0.25rem 0.75rem;
-    border-radius: 2px;
+    display: inline-block; font-size: 0.7rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid var(--accent);
+    padding: 0.25rem 0.75rem; border-radius: 2px;
     margin-bottom: 1.5rem;
     animation: fadeUp 0.6s ease both;
   }
   .hero-name {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: clamp(3rem, 8vw, 6.5rem);
-    line-height: 0.92;
-    letter-spacing: -0.03em;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: clamp(3.2rem, 8vw, 6.8rem);
+    line-height: 0.95;
+    letter-spacing: 0.04em;
     margin-bottom: 1.5rem;
     animation: fadeUp 0.6s 0.1s ease both;
   }
@@ -147,308 +111,192 @@
     -webkit-text-stroke: 1px var(--accent);
   }
   .hero-title {
-    font-size: 0.85rem;
-    color: var(--muted);
-    max-width: 540px;
-    margin-bottom: 2.5rem;
+    font-size: 0.85rem; color: var(--muted);
+    max-width: 540px; margin-bottom: 2.5rem;
     animation: fadeUp 0.6s 0.2s ease both;
     line-height: 1.9;
   }
   .hero-title span { color: var(--accent); }
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    animation: fadeUp 0.6s 0.3s ease both;
-  }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
   .btn-primary {
-    background: var(--accent);
-    color: #050a0e;
+    background: var(--accent); color: #050a0e;
     padding: 0.7rem 1.8rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: inline-block;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: all 0.2s; display: inline-block;
   }
   .btn-primary:hover { background: #00f5c4; transform: translateY(-2px); }
   .btn-ghost {
-    background: transparent;
-    color: var(--text);
+    background: transparent; color: var(--text);
     padding: 0.7rem 1.8rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 1px solid var(--border);
-    cursor: pointer;
-    transition: all 0.2s;
-    display: inline-block;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem; font-weight: 300;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; border: 1px solid var(--border);
+    cursor: pointer; transition: all 0.2s; display: inline-block;
   }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
-
   .hero-stats {
-    display: flex;
-    gap: 3rem;
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
+    display: flex; gap: 3rem; margin-top: 4rem;
+    padding-top: 2rem; border-top: 1px solid var(--border);
     animation: fadeUp 0.6s 0.4s ease both;
   }
   .stat-num {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 2rem;
-    color: var(--accent);
-    line-height: 1;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700; font-size: 2.4rem;
+    color: var(--accent); line-height: 1;
   }
   .stat-label { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
-
-  /* ---- SECTIONS ---- */
   section { padding: 5rem 0; border-top: 1px solid var(--border); }
   .section-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
+    font-size: 0.65rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--accent);
     margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    display: flex; align-items: center; gap: 1rem;
   }
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
   .section-heading {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    letter-spacing: -0.02em;
-    margin-bottom: 0.75rem;
-    line-height: 1.1;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.75rem; line-height: 1.05;
   }
-
-  /* ---- SKILLS ---- */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    margin-top: 2.5rem;
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); margin-top: 2.5rem;
   }
-  .skill-cell {
-    background: var(--surface);
-    padding: 1.5rem;
-    transition: background 0.2s;
-  }
+  .skill-cell { background: var(--surface); padding: 1.5rem; transition: background 0.2s; }
   .skill-cell:hover { background: #101f26; }
   .skill-cat { font-size: 0.6rem; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; margin-bottom: 0.75rem; }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .skill-tag {
-    font-size: 0.72rem;
-    padding: 0.2rem 0.65rem;
-    background: var(--dim);
-    color: var(--text);
-    border-radius: 2px;
-    border-left: 2px solid var(--accent);
+    font-size: 0.72rem; padding: 0.2rem 0.65rem;
+    background: var(--dim); color: var(--text);
+    border-radius: 2px; border-left: 2px solid var(--accent);
   }
-
-  /* ---- EXPERIENCE ---- */
   .exp-list { display: flex; flex-direction: column; gap: 0; margin-top: 2.5rem; }
   .exp-item {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 2rem;
-    padding: 2rem 0;
-    border-bottom: 1px solid var(--border);
-    position: relative;
+    display: grid; grid-template-columns: 180px 1fr;
+    gap: 2rem; padding: 2rem 0;
+    border-bottom: 1px solid var(--border); position: relative;
   }
   .exp-item::before {
-    content: '';
-    position: absolute;
-    left: 176px;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: var(--border);
+    content: ''; position: absolute;
+    left: 176px; top: 0; bottom: 0;
+    width: 1px; background: var(--border);
   }
   .exp-date { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.05em; padding-top: 0.25rem; }
   .exp-company {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600; font-size: 1.1rem;
+    letter-spacing: 0.04em; margin-bottom: 0.2rem;
   }
   .exp-role { font-size: 0.72rem; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 0.8rem; }
   .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
   .exp-bullets li { font-size: 0.78rem; color: var(--muted); padding-left: 1rem; position: relative; }
   .exp-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.65rem; top: 0.15rem; }
-
-  /* ---- PROJECTS ---- */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    margin-top: 2.5rem;
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); margin-top: 2.5rem;
   }
   .project-card {
-    background: var(--surface);
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
+    background: var(--surface); padding: 2rem;
+    position: relative; overflow: hidden;
     transition: background 0.3s;
-    display: flex;
-    flex-direction: column;
+    display: flex; flex-direction: column;
   }
   .project-card:hover { background: #0f1d24; }
   .project-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
     background: var(--accent);
-    transform: scaleX(0);
-    transition: transform 0.3s;
+    transform: scaleX(0); transition: transform 0.3s;
     transform-origin: left;
   }
   .project-card:hover::before { transform: scaleX(1); }
   .project-card.featured::before { background: var(--accent2); transform: scaleX(1); }
   .project-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 0.2rem 0.6rem;
-    border-radius: 2px;
-    margin-bottom: 1rem;
-    width: fit-content;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.2rem 0.6rem; border-radius: 2px;
+    margin-bottom: 1rem; width: fit-content;
   }
   .badge-fdroid { background: rgba(255,107,53,0.15); color: var(--accent2); border: 1px solid rgba(255,107,53,0.3); }
   .badge-full { background: rgba(0,212,170,0.1); color: var(--accent); border: 1px solid rgba(0,212,170,0.2); }
   .project-num {
-    position: absolute;
-    top: 1.5rem; right: 1.5rem;
-    font-family: 'Syne', sans-serif;
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--dim);
-    line-height: 1;
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3.5rem; font-weight: 700;
+    color: var(--dim); line-height: 1; letter-spacing: 0.04em;
   }
   .project-title {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
-    line-height: 1.2;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600; font-size: 1.3rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.75rem; line-height: 1.2;
   }
   .project-desc { font-size: 0.76rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; flex: 1; }
   .project-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
   .tech-pill {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.5rem;
-    background: var(--dim);
-    color: var(--muted);
-    border-radius: 2px;
+    font-size: 0.65rem; padding: 0.15rem 0.5rem;
+    background: var(--dim); color: var(--muted); border-radius: 2px;
   }
   .project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.7rem;
-    color: var(--accent);
-    text-decoration: none;
-    margin-top: 1rem;
-    letter-spacing: 0.05em;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.7rem; color: var(--accent);
+    text-decoration: none; margin-top: 1rem; letter-spacing: 0.05em;
   }
   .project-link:hover { text-decoration: underline; }
-
-  /* F-DROID HIGHLIGHT */
   .fdroid-banner {
     background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,107,53,0.02));
     border: 1px solid rgba(255,107,53,0.25);
     border-left: 3px solid var(--accent2);
-    padding: 1.25rem 1.5rem;
-    margin-top: 2rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+    padding: 1.25rem 1.5rem; margin-top: 2rem;
+    display: flex; align-items: flex-start; gap: 1rem;
   }
   .fdroid-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
   .fdroid-text strong { color: var(--accent2); font-size: 0.8rem; display: block; margin-bottom: 0.3rem; }
   .fdroid-text p { font-size: 0.72rem; color: var(--muted); line-height: 1.7; }
-
-  /* ---- EDUCATION ---- */
   .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 2.5rem; }
   .edu-card { background: var(--surface); padding: 2rem; }
-  .edu-degree { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; }
+  .edu-degree { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 1.05rem; letter-spacing: 0.04em; margin-bottom: 0.3rem; }
   .edu-school { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; }
   .edu-meta { font-size: 0.68rem; color: var(--accent); }
-
-  /* ---- CONTACT ---- */
   .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    margin-top: 2.5rem;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); margin-top: 2.5rem;
   }
   .contact-item {
-    background: var(--surface);
-    padding: 1.5rem;
-    text-decoration: none;
-    color: var(--text);
-    display: block;
-    transition: background 0.2s;
+    background: var(--surface); padding: 1.5rem;
+    text-decoration: none; color: var(--text);
+    display: block; transition: background 0.2s;
   }
   .contact-item:hover { background: #101f26; }
   .contact-icon { font-size: 1.1rem; margin-bottom: 0.5rem; }
   .contact-label { font-size: 0.6rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.25rem; }
   .contact-value { font-size: 0.8rem; color: var(--accent); word-break: break-all; }
-
-  /* ---- FOOTER ---- */
   footer {
-    padding: 2rem;
-    text-align: center;
+    padding: 2rem; text-align: center;
     border-top: 1px solid var(--border);
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
+    font-size: 0.65rem; color: var(--muted); letter-spacing: 0.08em;
   }
   footer span { color: var(--accent); }
-
-  /* ---- ANIMATIONS ---- */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
-  /* Scroll reveal */
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* Cursor blink */
-  .cursor::after {
-    content: '_';
-    animation: blink 1s step-end infinite;
-    color: var(--accent);
-  }
+  .cursor::after { content: '_'; animation: blink 1s step-end infinite; color: var(--accent); }
   @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
-
   @media (max-width: 700px) {
     .exp-item { grid-template-columns: 1fr; }
     .exp-item::before { display: none; }
@@ -460,7 +308,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="#">SE//</a>
@@ -474,7 +321,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="wrapper">
   <section class="hero" id="about">
     <div class="hero-glow"></div>
@@ -486,7 +332,7 @@
         <span class="line2">ERUKULLA<span class="cursor"></span></span>
       </h1>
       <p class="hero-title">
-        Full Stack & Mobile Developer · Hyderabad, India<br/>
+        Full Stack &amp; Mobile Developer &middot; Hyderabad, India<br/>
         Building backends with <span>Java / Spring Boot</span> and cross-platform<br/>
         apps with <span>Flutter</span>. Published on <span>F-Droid</span>.
       </p>
@@ -494,30 +340,17 @@
         <a class="btn-primary" href="#projects">View Projects</a>
         <a class="btn-ghost" href="mailto:erukullasaiganesh9@gmail.com">Get in Touch</a>
       </div>
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num">3+</div>
-          <div class="stat-label">Years Exp.</div>
-        </div>
-        <div>
-          <div class="stat-num">3</div>
-          <div class="stat-label">Projects Shipped</div>
-        </div>
-        <div>
-          <div class="stat-num">1</div>
-          <div class="stat-label">F-Droid App</div>
-        </div>
-        <div>
-          <div class="stat-num">8.69</div>
-          <div class="stat-label">B.Tech CGPA</div>
-        </div>
-      </div>
+      <!-- <div class="hero-stats">
+        <div><div class="stat-num">3+</div><div class="stat-label">Years Exp.</div></div>
+        <div><div class="stat-num">3</div><div class="stat-label">Projects Shipped</div></div>
+        <div><div class="stat-num">1</div><div class="stat-label">F-Droid App</div></div>
+        <div><div class="stat-num">8.69</div><div class="stat-label">B.Tech CGPA</div></div>
+      </div> -->
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="skills">
-    <div class="section-label">01 — Technical Skills</div>
+    <div class="section-label">01 &mdash; Technical Skills</div>
     <h2 class="section-heading reveal">The Stack</h2>
     <div class="skills-grid reveal">
       <div class="skill-cell">
@@ -545,7 +378,7 @@
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-cat">Tools & Infra</div>
+        <div class="skill-cat">Tools &amp; Infra</div>
         <div class="skill-tags">
           <span class="skill-tag">Git</span>
           <span class="skill-tag">GitHub</span>
@@ -558,78 +391,62 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="section-label">02 — Experience</div>
+    <div class="section-label">02 &mdash; Experience</div>
     <h2 class="section-heading reveal">Where I've Worked</h2>
     <div class="exp-list">
-
       <div class="exp-item reveal">
         <div class="exp-date">Nov 2025<br/>Present</div>
         <div>
           <div class="exp-company">TResource Innovations Pvt Ltd</div>
-          <div class="exp-role">Trainee Software Engineer · Hyderabad</div>
+          <div class="exp-role">Trainee Software Engineer &middot; Hyderabad</div>
           <ul class="exp-bullets">
-            <li>Building & maintaining REST APIs with Java + Spring Boot and MySQL persistence.</li>
+            <li>Building &amp; maintaining REST APIs with Java + Spring Boot and MySQL persistence.</li>
             <li>Developing cross-platform mobile features in Flutter with Firebase integration.</li>
           </ul>
         </div>
       </div>
-
       <div class="exp-item reveal">
         <div class="exp-date">Jul 2024<br/>Oct 2024</div>
         <div>
           <div class="exp-company">Mphasis Private Limited</div>
-          <div class="exp-role">Associate Software Engineer · Bangalore</div>
+          <div class="exp-role">Associate Software Engineer &middot; Bangalore</div>
           <ul class="exp-bullets">
             <li>Developed backend components using Java and Spring Boot with MySQL persistence.</li>
             <li>Collaborated cross-functionally on backend feature development and system integration.</li>
           </ul>
         </div>
       </div>
-
       <div class="exp-item reveal">
         <div class="exp-date">Mar 2024<br/>Jun 2024</div>
         <div>
           <div class="exp-company">Vyva Consulting Inc.</div>
-          <div class="exp-role">ICM Consultant · Hyderabad</div>
+          <div class="exp-role">ICM Consultant &middot; Hyderabad</div>
           <ul class="exp-bullets">
             <li>Managed complex SQL reporting, ETL-style data transformations, and client integrations.</li>
             <li>Translated business rules into reliable database queries and reports for stakeholders.</li>
           </ul>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects">
-    <div class="section-label">03 — Projects</div>
+    <div class="section-label">03 &mdash; Projects</div>
     <h2 class="section-heading reveal">Things I've Built</h2>
-
-    <!-- F-Droid banner -->
     <div class="fdroid-banner reveal">
-      <div class="fdroid-icon">🔓</div>
+      <div class="fdroid-icon">&#128275;</div>
       <div class="fdroid-text">
-        <strong>Published on F-Droid · Open Source Achievement</strong>
-        <p>Notes &amp; Todo was accepted into the F-Droid open-source app store — one of the most rigorous review pipelines in Android development. This demonstrates build reproducibility, clean open-source licensing, and a genuine commitment to user privacy.</p>
+        <strong>Published on F-Droid &middot; Open Source Achievement</strong>
+        <p>Notes &amp; Todo was accepted into the F-Droid open-source app store &mdash; one of the most rigorous review pipelines in Android development. This demonstrates build reproducibility, clean open-source licensing, and a genuine commitment to user privacy.</p>
       </div>
     </div>
-
     <div class="projects-grid" style="margin-top:1.5rem;">
-
-      <!-- Notes & Todo – Featured -->
       <div class="project-card featured reveal">
         <span class="project-num">01</span>
-        <div class="project-badge badge-fdroid">✓ F-Droid Published</div>
-        <h3 class="project-title">Notes &amp; Todo — Privacy Task Manager</h3>
-        <p class="project-desc">
-          Privacy-focused, offline-first notes and to-do manager built with Flutter.
-          Uses Hive for local storage — zero data ever leaves the device.
-          Accepted into F-Droid under MIT license, with Material 3 UI, full dark/light mode,
-          built-in reminders, and support for daily, weekly, and monthly repeating tasks.
-        </p>
+        <div class="project-badge badge-fdroid">&#10003; F-Droid Published</div>
+        <h3 class="project-title">Notes &amp; Todo &mdash; Privacy Task Manager</h3>
+        <p class="project-desc">Privacy-focused, offline-first notes and to-do manager built with Flutter. Uses Hive for local storage &mdash; zero data ever leaves the device. Accepted into F-Droid under MIT license, with Material 3 UI, full dark/light mode, built-in reminders, and support for daily, weekly, and monthly repeating tasks.</p>
         <div class="project-tech">
           <span class="tech-pill">Flutter</span>
           <span class="tech-pill">Dart</span>
@@ -638,20 +455,13 @@
           <span class="tech-pill">Offline First</span>
           <span class="tech-pill">MIT License</span>
         </div>
-        <a class="project-link" href="https://gitlab.com/todo-group1005911/notes_and_todo" target="_blank">
-          ↗ View Source on GitLab
-        </a>
+        <a class="project-link" href="https://gitlab.com/todo-group1005911/notes_and_todo" target="_blank">&#8599; View Source on GitLab</a>
       </div>
-
-      <!-- Event Management -->
       <div class="project-card reveal">
         <span class="project-num">02</span>
         <div class="project-badge badge-full">Full Stack</div>
         <h3 class="project-title">Event Management Application</h3>
-        <p class="project-desc">
-          Full-stack event discovery and booking mobile app. Users can create, discover, and join events — including trips and group activities.
-          Features email OTP via SMTP, JWT login sessions, token-based password reset, and role-based access control (User / Admin / Super Admin).
-        </p>
+        <p class="project-desc">Full-stack event discovery and booking mobile app. Users can create, discover, and join events &mdash; including trips and group activities. Features email OTP via SMTP, JWT login sessions, token-based password reset, and role-based access control (User / Admin / Super Admin).</p>
         <div class="project-tech">
           <span class="tech-pill">Flutter</span>
           <span class="tech-pill">Spring Boot</span>
@@ -661,17 +471,11 @@
           <span class="tech-pill">RBAC</span>
         </div>
       </div>
-
-      <!-- What's Cooking -->
       <div class="project-card reveal">
         <span class="project-num">03</span>
         <div class="project-badge badge-full">Full Stack</div>
         <h3 class="project-title">What's Cooking?</h3>
-        <p class="project-desc">
-          Recipe discovery app where users search by available ingredients to get personalized results.
-          Built scalable REST APIs with Spring Boot and a normalized MySQL schema for ingredient-based filtering
-          and dynamic query processing.
-        </p>
+        <p class="project-desc">Recipe discovery app where users search by available ingredients to get personalized results. Built scalable REST APIs with Spring Boot and a normalized MySQL schema for ingredient-based filtering and dynamic query processing.</p>
         <div class="project-tech">
           <span class="tech-pill">Spring Boot</span>
           <span class="tech-pill">MySQL</span>
@@ -679,71 +483,65 @@
           <span class="tech-pill">Flutter</span>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- EDUCATION -->
   <section id="education">
-    <div class="section-label">04 — Education</div>
+    <div class="section-label">04 &mdash; Education</div>
     <h2 class="section-heading reveal">Academic Background</h2>
     <div class="edu-grid reveal">
       <div class="edu-card">
-        <div class="edu-degree">B.Tech — Computer Science &amp; Engineering</div>
-        <div class="edu-school">Bharath Institute of Higher Education and Research · Chennai</div>
-        <div class="edu-meta">2018 – 2022 · CGPA 8.69 / 10</div>
+        <div class="edu-degree">B.Tech &mdash; Computer Science &amp; Engineering</div>
+        <div class="edu-school">Bharath Institute of Higher Education and Research &middot; Chennai</div>
+        <div class="edu-meta">2018 &ndash; 2022 &middot; CGPA 8.69 / 10</div>
       </div>
       <div class="edu-card">
-        <div class="edu-degree">Intermediate — MPC</div>
-        <div class="edu-school">Sri Gayatri Institutions · Hyderabad</div>
-        <div class="edu-meta">2016 – 2018 · 92.4%</div>
+        <div class="edu-degree">Intermediate &mdash; MPC</div>
+        <div class="edu-school">Sri Gayatri Institutions &middot; Hyderabad</div>
+        <div class="edu-meta">2016 &ndash; 2018 &middot; 92.4%</div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
-    <div class="section-label">05 — Contact</div>
+    <div class="section-label">05 &mdash; Contact</div>
     <h2 class="section-heading reveal">Get In Touch</h2>
     <div class="contact-grid reveal">
       <a class="contact-item" href="mailto:erukullasaiganesh9@gmail.com">
-        <div class="contact-icon">✉</div>
+        <div class="contact-icon">&#9993;</div>
         <div class="contact-label">Email</div>
         <div class="contact-value">erukullasaiganesh9@gmail.com</div>
       </a>
       <a class="contact-item" href="tel:+919652116569">
-        <div class="contact-icon">📞</div>
+        <div class="contact-icon">&#128222;</div>
         <div class="contact-label">Phone</div>
         <div class="contact-value">+91 96521 16569</div>
       </a>
       <a class="contact-item" href="https://github.com/saiganesh390" target="_blank">
-        <div class="contact-icon">🐙</div>
+        <div class="contact-icon">&#8997;</div>
         <div class="contact-label">GitHub</div>
         <div class="contact-value">github.com/saiganesh390</div>
       </a>
-      <a class="contact-item" href="https://www.linkedin.com/in/saiganesh-erukulla-9a3717169/" target="_blank">
-        <div class="contact-icon">💡</div>
+      <a class="contact-item" href="https://www.linkedin.com/in/sai-ganesh-erukulla-9a3717169/" target="_blank">
+        <div class="contact-icon">&#9672;</div>
         <div class="contact-label">LinkedIn</div>
         <div class="contact-value">sai-ganesh-erukulla</div>
       </a>
       <a class="contact-item" href="https://gitlab.com/todo-group1005911/notes_and_todo" target="_blank">
-        <div class="contact-icon">🦊</div>
+        <div class="contact-icon">&#129418;</div>
         <div class="contact-label">GitLab (F-Droid App)</div>
         <div class="contact-value">notes_and_todo</div>
       </a>
     </div>
   </section>
-
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <span>Saiganesh Erukulla</span> · Full Stack &amp; Mobile Developer · Hyderabad, India<br/>
-  <span style="color:var(--muted);margin-top:0.4rem;display:block;">Java · Spring Boot · Flutter · F-Droid Published</span>
+  <span>Saiganesh Erukulla</span> &middot; Full Stack &amp; Mobile Developer &middot; Hyderabad, India<br/>
+  <span style="color:var(--muted);margin-top:0.4rem;display:block;">Java &middot; Spring Boot &middot; Flutter &middot; F-Droid Published</span>
 </footer>
 
 <script>
-  // Scroll reveal
   const els = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
